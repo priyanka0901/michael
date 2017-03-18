@@ -211,8 +211,9 @@ a {
 
 .viewlayout {
   width: 75%;
-  height: 100%;
-  background-color: #FFFFFF; }
+  height: 800px;
+  background-color: #FFFFFF;
+  overflow: scroll; }
 
 .search {
   width: 400px;
@@ -222,3 +223,14 @@ a {
   color: #333;
   margin: 25px 120px;
   outline: none; }
+
+.machine-layout {
+  width: 80%;
+  height: 250px;
+  border: 1px solid #ccc;
+  margin: 40px 50px; }
+
+.card__image {
+  height: 200px;
+  background-size: cover;
+  background-position: center; }

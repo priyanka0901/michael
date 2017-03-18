@@ -16,9 +16,7 @@ webpackJsonp([0],[
 	
 	var _form2 = _interopRequireDefault(_form);
 	
-	var _view = __webpack_require__(234);
-	
-	var _view2 = _interopRequireDefault(_view);
+	var _view = __webpack_require__(235);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -33,7 +31,7 @@ webpackJsonp([0],[
 	                'div',
 	                { className: 'container' },
 	                _react2.default.createElement(_form2.default, null),
-	                _react2.default.createElement(_view2.default, null)
+	                _react2.default.createElement(_view.Card, null)
 	            )
 	        );
 	    }
@@ -26536,7 +26534,7 @@ webpackJsonp([0],[
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
-	var FileInput = __webpack_require__(236);
+	var FileInput = __webpack_require__(234);
 	
 	var FormLayout = _react2.default.createClass((_React$createClass = {
 	    displayName: 'FormLayout',
@@ -26669,41 +26667,6 @@ webpackJsonp([0],[
 /* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _data = __webpack_require__(237);
-	
-	var _data2 = _interopRequireDefault(_data);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var ViewLayout = _react2.default.createClass({
-	    displayName: 'ViewLayout',
-	
-	    render: function render() {
-	        return _react2.default.createElement(
-	            'div',
-	            { className: 'viewlayout' },
-	            _react2.default.createElement('input', { name: 'search', placeholder: 'search', className: 'search' })
-	        );
-	    }
-	});
-	
-	exports.default = ViewLayout;
-
-/***/ },
-/* 235 */,
-/* 236 */
-/***/ function(module, exports, __webpack_require__) {
-
 	var React = __webpack_require__(1);
 	
 	var FileInput = React.createClass({
@@ -26772,6 +26735,74 @@ webpackJsonp([0],[
 
 
 /***/ },
+/* 235 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.Card = undefined;
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _data = __webpack_require__(237);
+	
+	var _data2 = _interopRequireDefault(_data);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var ViewLayout = _react2.default.createClass({
+	    displayName: 'ViewLayout',
+	
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'pure-u-lg-1-2 pure-u-md-1-2 pure-u-sm-1' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'machine-layout' },
+	                _react2.default.createElement('div', { className: 'card__image', style: { backgroundImage: "url(" + this.props.image + ")" } }),
+	                _react2.default.createElement(
+	                    'p',
+	                    { className: 'card__dishname' },
+	                    this.props.name
+	                )
+	            )
+	        );
+	    }
+	});
+	
+	var Card = _react2.default.createClass({
+	    displayName: 'Card',
+	
+	    createCard: function createCard(data) {
+	        return _react2.default.createElement(ViewLayout, { name: data.name, image: data.image, key: data.id });
+	    },
+	    createCards: function createCards(machine) {
+	        return machine.map(this.createCard);
+	    },
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'viewlayout' },
+	            _react2.default.createElement('input', { name: 'search', placeholder: 'search', className: 'search' }),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'pure-g' },
+	                this.createCards(_data2.default)
+	            )
+	        );
+	    }
+	});
+	
+	exports.Card = Card;
+
+/***/ },
+/* 236 */,
 /* 237 */
 /***/ function(module, exports) {
 
@@ -26783,63 +26814,83 @@ webpackJsonp([0],[
 	/* eslint-disable */
 	
 	var machine = [{
+	    "id": "1",
 	    "name": "ball bearing",
 	    "image": "https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "2",
 	    "name": "ancillary",
 	    "image": "https://images.pexels.com/photos/188777/pexels-photo-188777.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "3",
 	    "name": "belt",
 	    "image": "https://images.pexels.com/photos/162601/nuts-screw-metal-thread-162601.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "4",
 	    "name": "camshaft",
 	    "image": "https://images.pexels.com/photos/51320/drill-milling-milling-machine-drilling-51320.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "5",
 	    "name": "motor",
 	    "image": "https://images.pexels.com/photos/50691/drill-milling-milling-machine-drilling-50691.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "6",
 	    "name": "clockwork",
 	    "image": "https://images.pexels.com/photos/50691/drill-milling-milling-machine-drilling-50691.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "7",
 	    "name": "plunger",
 	    "image": "https://images.pexels.com/photos/47338/drill-milling-milling-machine-drilling-47338.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "8",
 	    "name": "radiator",
 	    "image": "https://images.pexels.com/photos/209168/pexels-photo-209168.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "9",
 	    "name": "roller",
 	    "image": "https://images.pexels.com/photos/159191/ship-machines-ropes-role-159191.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "10",
 	    "name": "spare part",
 	    "image": "https://images.pexels.com/photos/191738/pexels-photo-191738.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "11",
 	    "name": "starter motor",
 	    "image": "https://images.pexels.com/photos/64239/tank-war-armour-heavy-64239.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "12",
 	    "name": "tripwire",
 	    "image": "https://images.pexels.com/photos/246753/pexels-photo-246753.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "13",
 	    "name": "valve",
 	    "image": "https://images.pexels.com/photos/312419/pexels-photo-312419.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "14",
 	    "name": "reservoir",
 	    "image": "https://images.pexels.com/photos/2391/dirty-industry-stack-factory.jpg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "15",
 	    "name": "sprocket",
 	    "image": "https://images.pexels.com/photos/171198/pexels-photo-171198.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "16",
 	    "name": "the wheel",
 	    "image": "https://images.pexels.com/photos/8180/time-watch-theme-machines-gears.jpg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "17",
 	    "name": "treadle",
 	    "image": "https://images.pexels.com/photos/207483/pexels-photo-207483.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "18",
 	    "name": "workings",
 	    "image": "https://images.pexels.com/photos/48174/drive-gear-gears-technology-48174.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "19",
 	    "name": "piston",
 	    "image": "https://images.pexels.com/photos/117729/pexels-photo-117729.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
+	    "id": "20",
 	    "name": "photoelectric cell",
 	    "image": "https://images.pexels.com/photos/209306/pexels-photo-209306.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}];
