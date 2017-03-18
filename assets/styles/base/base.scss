@@ -21,13 +21,11 @@ body {
     font-smoothing: antialiased;
 }
 
-.containercard {
-    max-width: 1200px;
-    margin: auto;
-    margin-top: 90px;
+a {
+    text-decoration: none;
 }
 
-a {
-    color: white;
-    text-decoration: none;
+.container{
+    width: 100%;
+    display: flex;
 }

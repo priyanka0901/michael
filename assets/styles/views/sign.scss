@@ -56,9 +56,9 @@
 .button_register{
     width: 40%;
     padding: 9px 10px;
-    border:1px solid $combo-color;
+    /*border:1px solid $combo-color;*/
     display: inline-block;
-    color:$combo-color !important;
+  /*  color:$combo-color !important;*/
     text-transform: uppercase;
     text-align: center;
     border-radius: 4px;
@@ -70,7 +70,7 @@
 .button_signin{
     width: 40%;
     padding: 10px 10px;
-    background-color: $combo-color;
+    /*background-color: $combo-color;*/
     display: inline-block;
     color: #fff !important;
     font-weight: 600;
