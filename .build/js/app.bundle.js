@@ -26749,7 +26749,7 @@ webpackJsonp([0],[
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _data = __webpack_require__(237);
+	var _data = __webpack_require__(236);
 	
 	var _data2 = _interopRequireDefault(_data);
 	
@@ -26768,7 +26768,7 @@ webpackJsonp([0],[
 	                _react2.default.createElement('div', { className: 'card__image', style: { backgroundImage: "url(" + this.props.image + ")" } }),
 	                _react2.default.createElement(
 	                    'p',
-	                    { className: 'card__dishname' },
+	                    { className: 'card__name' },
 	                    this.props.name
 	                )
 	            )
@@ -26779,6 +26779,20 @@ webpackJsonp([0],[
 	var Card = _react2.default.createClass({
 	    displayName: 'Card',
 	
+	    handleKeyPress: function handleKeyPress() {
+	        $("#search").on("keyup", function () {
+	            var g = $(this).val().toLowerCase();
+	            $(".card__name").each(function () {
+	                var s = $(this).text().toLowerCase();
+	                console.log(s.indexOf(g) != -1);
+	                if (s.indexOf(g) != -1) {
+	                    $(this).parent().parent().css('display', 'inline-block');
+	                } else {
+	                    $(this).parent().parent().css('display', 'none');
+	                }
+	            });
+	        });
+	    },
 	    createCard: function createCard(data) {
 	        return _react2.default.createElement(ViewLayout, { name: data.name, image: data.image, key: data.id });
 	    },
@@ -26789,7 +26803,11 @@ webpackJsonp([0],[
 	        return _react2.default.createElement(
 	            'div',
 	            { className: 'viewlayout' },
-	            _react2.default.createElement('input', { name: 'search', placeholder: 'search', className: 'search' }),
+	            _react2.default.createElement(
+	                'form',
+	                null,
+	                _react2.default.createElement('input', { name: 'search', placeholder: 'search', className: 'search', id: 'search', onKeyPress: this.handleKeyPress })
+	            ),
 	            _react2.default.createElement(
 	                'div',
 	                { className: 'pure-g' },
@@ -26802,8 +26820,7 @@ webpackJsonp([0],[
 	exports.Card = Card;
 
 /***/ },
-/* 236 */,
-/* 237 */
+/* 236 */
 /***/ function(module, exports) {
 
 	"use strict";

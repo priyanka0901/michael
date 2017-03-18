@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, Link, hashHistory, IndexRoute, IndexRedirect } from 'react-router';
+import { Router, Route, Link, hashHistory } from 'react-router';
 import FormLayout from './components/home/form.jsx';
 import { Card } from './components/home/view.jsx';
 
