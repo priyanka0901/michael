@@ -51,7 +51,7 @@ const FormLayout = React.createClass({
             }
         return(
             <div className="sidebar">
-                <div className="logo"><img src="../../assets/images/logo.svg" /><p>michael</p></div>
+                <div className="logo"><img src="assets/images/logo.svg" /><p>michael</p></div>
                 <div className="form-layout">
                     
                     <form id="myForm" className="machine__form">
@@ -76,11 +76,11 @@ const FormLayout = React.createClass({
                             </div>
                             <div className="input-container">
                                 <label className="typefile__input">
-                                  <img src="../../assets/images/photoattach.svg" />
+                                  <img src="assets/images/photoattach.svg" />
                                   <input type="file" onChange={(e)=>this._handleImageChange(e)} />
                                 </label>
                                 <label className="typefile__input">
-                                    <img src="../../assets/images/attach.svg" className="input__img" />
+                                    <img src="assets/images/attach.svg" className="input__img" />
                                     <input className="fileInput" type="file" onChange={(e)=>this._handleDocChange(e)} />
                                 </label> 
                             </div>

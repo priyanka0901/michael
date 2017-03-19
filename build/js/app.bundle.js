@@ -26590,7 +26590,7 @@ webpackJsonp([0],[
 	        _react2.default.createElement(
 	            'div',
 	            { className: 'logo' },
-	            _react2.default.createElement('img', { src: '../../assets/images/logo.svg' }),
+	            _react2.default.createElement('img', { src: 'assets/images/logo.svg' }),
 	            _react2.default.createElement(
 	                'p',
 	                null,
@@ -26651,7 +26651,7 @@ webpackJsonp([0],[
 	                        _react2.default.createElement(
 	                            'label',
 	                            { className: 'typefile__input' },
-	                            _react2.default.createElement('img', { src: '../../assets/images/photoattach.svg' }),
+	                            _react2.default.createElement('img', { src: 'assets/images/photoattach.svg' }),
 	                            _react2.default.createElement('input', { type: 'file', onChange: function onChange(e) {
 	                                    return _this3._handleImageChange(e);
 	                                } })
@@ -26659,7 +26659,7 @@ webpackJsonp([0],[
 	                        _react2.default.createElement(
 	                            'label',
 	                            { className: 'typefile__input' },
-	                            _react2.default.createElement('img', { src: '../../assets/images/attach.svg', className: 'input__img' }),
+	                            _react2.default.createElement('img', { src: 'assets/images/attach.svg', className: 'input__img' }),
 	                            _react2.default.createElement('input', { className: 'fileInput', type: 'file', onChange: function onChange(e) {
 	                                    return _this3._handleDocChange(e);
 	                                } })
@@ -26780,7 +26780,7 @@ webpackJsonp([0],[
 	    render: function render() {
 	        return _react2.default.createElement(
 	            'div',
-	            { className: 'pure-u-lg-1-2 pure-u-md-1-2 pure-u-sm-1' },
+	            { className: 'pure-u-1-2 pure-u-lg-1-2 pure-u-md-1-2 pure-u-sm-1' },
 	            _react2.default.createElement(
 	                'div',
 	                { className: 'machine-layout', onClick: this.selectHandle },
@@ -26790,7 +26790,7 @@ webpackJsonp([0],[
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'select-effect' },
-	                        _react2.default.createElement('img', { src: '../../assets/images/right.svg' })
+	                        _react2.default.createElement('img', { src: 'assets/images/right.svg' })
 	                    )
 	                ),
 	                _react2.default.createElement(

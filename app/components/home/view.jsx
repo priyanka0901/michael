@@ -15,11 +15,11 @@ const ViewLayout = React.createClass({
     },
     render: function(){
         return (
-            <div className="pure-u-lg-1-2 pure-u-md-1-2 pure-u-sm-1">
+            <div className="pure-u-1-2 pure-u-lg-1-2 pure-u-md-1-2 pure-u-sm-1">
                 <div className="machine-layout" onClick={this.selectHandle}>
                     <div className="card__image" style={{backgroundImage:"url(" + this.props.image + ")"}}>
                         <div className="select-effect">
-                            <img src="../../assets/images/right.svg" />
+                            <img src="assets/images/right.svg" />
                         </div>
                     </div>
                     <p className="card__name">{this.props.name}</p>

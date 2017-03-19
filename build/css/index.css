@@ -27,6 +27,7 @@ a {
   display: -ms-flexbox;
   display: flex; }
 
+/*@import 'base/grid';*/
 /*---sidebar form---*/
 .sidebar {
   width: 30%;
