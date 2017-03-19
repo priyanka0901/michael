@@ -18,7 +18,7 @@
     line-height: 1.6;
     padding: 10px 12px;
     font-size: 16px;
-    color: #333;
+    color: rgba(0, 0, 0, 0.45);
     margin: 25px 50px;
     outline: none;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -46,8 +46,9 @@
 
 .card__name {
     text-transform: capitalize;
-    margin-top: 7px;
+    margin-top: 10px;
     color: #444;
+    font-weight: 600;
 }
 
 .select-effect{

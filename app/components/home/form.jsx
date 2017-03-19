@@ -55,6 +55,7 @@ const FormLayout = React.createClass({
                 <div className="form-layout">
                     
                     <form id="myForm" className="machine__form">
+                    <p className="machine-para"> Add your machine </p>
                         <div className="form-para">
                             <label htmlFor ="fullname" className="label-para">Full Name</label>
                             <input type="text" name="fname" id="fullname" className="form-input" pattern="[A-Za-z]{1,32}" required/>
@@ -71,12 +72,12 @@ const FormLayout = React.createClass({
 
                         <div className="button-conatiner">
                             <div className="button-box">
-                                <button className="button" type="submit">submit</button>
+                                <button className="button" type="submit">Add Machine</button>
                             </div>
                             <div className="input-container">
                                 <label className="typefile__input">
-                                    <img src="../../assets/images/photoattach.svg"/>
-                                    <input className="fileInput" type="file" onChange={(e)=>this._handleImageChange(e)} />
+                                  <img src="../../assets/images/photoattach.svg" />
+                                  <input type="file" onChange={(e)=>this._handleImageChange(e)} />
                                 </label>
                                 <label className="typefile__input">
                                     <img src="../../assets/images/attach.svg" className="input__img" />

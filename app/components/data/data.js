@@ -4,12 +4,13 @@ var machine = [
     {   
         "id": "1",
         "name": "ball bearing",
-        "image": "https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
+        "image": "https://images.pexels.com/photos/51320/drill-milling-milling-machine-drilling-51320.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
+        
     },
     {   
         "id": "2",
         "name": "ancillary",
-        "image": "https://images.pexels.com/photos/188777/pexels-photo-188777.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
+        "image": "https://images.pexels.com/photos/246753/pexels-photo-246753.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
     },
     {
         "id": "3",
@@ -19,7 +20,8 @@ var machine = [
     {
         "id": "4",
         "name": "camshaft",
-        "image": "https://images.pexels.com/photos/51320/drill-milling-milling-machine-drilling-51320.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
+        "image": "https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
+        
     },
     {
         "id": "5",
@@ -59,7 +61,8 @@ var machine = [
     {
         "id": "12",
         "name": "tripwire",
-        "image": "https://images.pexels.com/photos/246753/pexels-photo-246753.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
+        "image": "https://images.pexels.com/photos/188777/pexels-photo-188777.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
+        
     },
     {
         "id": "13",

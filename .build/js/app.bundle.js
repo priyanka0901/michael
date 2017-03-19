@@ -26604,6 +26604,11 @@ webpackJsonp([0],[
 	                'form',
 	                { id: 'myForm', className: 'machine__form' },
 	                _react2.default.createElement(
+	                    'p',
+	                    { className: 'machine-para' },
+	                    ' Add your machine '
+	                ),
+	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'form-para' },
 	                    _react2.default.createElement(
@@ -26637,7 +26642,7 @@ webpackJsonp([0],[
 	                        _react2.default.createElement(
 	                            'button',
 	                            { className: 'button', type: 'submit' },
-	                            'submit'
+	                            'Add Machine'
 	                        )
 	                    ),
 	                    _react2.default.createElement(
@@ -26647,7 +26652,7 @@ webpackJsonp([0],[
 	                            'label',
 	                            { className: 'typefile__input' },
 	                            _react2.default.createElement('img', { src: '../../assets/images/photoattach.svg' }),
-	                            _react2.default.createElement('input', { className: 'fileInput', type: 'file', onChange: function onChange(e) {
+	                            _react2.default.createElement('input', { type: 'file', onChange: function onChange(e) {
 	                                    return _this3._handleImageChange(e);
 	                                } })
 	                        ),
@@ -26855,11 +26860,12 @@ webpackJsonp([0],[
 	var machine = [{
 	    "id": "1",
 	    "name": "ball bearing",
-	    "image": "https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
+	    "image": "https://images.pexels.com/photos/51320/drill-milling-milling-machine-drilling-51320.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
+	
 	}, {
 	    "id": "2",
 	    "name": "ancillary",
-	    "image": "https://images.pexels.com/photos/188777/pexels-photo-188777.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
+	    "image": "https://images.pexels.com/photos/246753/pexels-photo-246753.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 	}, {
 	    "id": "3",
 	    "name": "belt",
@@ -26867,7 +26873,8 @@ webpackJsonp([0],[
 	}, {
 	    "id": "4",
 	    "name": "camshaft",
-	    "image": "https://images.pexels.com/photos/51320/drill-milling-milling-machine-drilling-51320.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
+	    "image": "https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
+	
 	}, {
 	    "id": "5",
 	    "name": "motor",
@@ -26899,7 +26906,8 @@ webpackJsonp([0],[
 	}, {
 	    "id": "12",
 	    "name": "tripwire",
-	    "image": "https://images.pexels.com/photos/246753/pexels-photo-246753.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
+	    "image": "https://images.pexels.com/photos/188777/pexels-photo-188777.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
+	
 	}, {
 	    "id": "13",
 	    "name": "valve",
