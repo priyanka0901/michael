@@ -51,10 +51,10 @@ const FormLayout = React.createClass({
             }
         return(
             <div className="sidebar">
-                <p className="logo">Michael</p>
+                <div className="logo"><img src="../../assets/images/logo.svg" /><p>michael</p></div>
                 <div className="form-layout">
-                    <p className="add-machine">Add your machine </p>
-                    <form id="myForm">
+                    
+                    <form id="myForm" className="machine__form">
                         <div className="form-para">
                             <label htmlFor ="fullname" className="label-para">Full Name</label>
                             <input type="text" name="fname" id="fullname" className="form-input" pattern="[A-Za-z]{1,32}" required/>
@@ -65,21 +65,26 @@ const FormLayout = React.createClass({
                             <input type ="text" id="serial" name="serial" className="form-input" required/>
                         </div>
 
-                        <div className="docfile form-para">
-                            <label htmlFor = "docfile" className="label-para">Attach Documents</label>
-                            <input className="fileInput" type="file" onChange={(e)=>this._handleDocChange(e)} />
+                        <div className="img-preview form-para previewComponent">
+                            {$imagePreview}
                         </div>
 
-                        <div className="previewComponent form-para">
-                            <div className="img-preview">
-                                {$imagePreview}
-                             </div>
-                            <input className="fileInput" type="file" onChange={(e)=>this._handleImageChange(e)} />
+                        <div className="button-conatiner">
+                            <div className="button-box">
+                                <button className="button" type="submit">submit</button>
+                            </div>
+                            <div className="input-container">
+                                <label className="typefile__input">
+                                    <img src="../../assets/images/photoattach.svg"/>
+                                    <input className="fileInput" type="file" onChange={(e)=>this._handleImageChange(e)} />
+                                </label>
+                                <label className="typefile__input">
+                                    <img src="../../assets/images/attach.svg" className="input__img" />
+                                    <input className="fileInput" type="file" onChange={(e)=>this._handleDocChange(e)} />
+                                </label> 
+                            </div>
                         </div>
 
-                        <div className="submit-button">
-                            <button className="button" type="submit">submit</button>
-                        </div>
                     </form>
                 </div>
             </div>

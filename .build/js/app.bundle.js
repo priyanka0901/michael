@@ -26588,21 +26588,21 @@ webpackJsonp([0],[
 	        'div',
 	        { className: 'sidebar' },
 	        _react2.default.createElement(
-	            'p',
+	            'div',
 	            { className: 'logo' },
-	            'Michael'
+	            _react2.default.createElement('img', { src: '../../assets/images/logo.svg' }),
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                'michael'
+	            )
 	        ),
 	        _react2.default.createElement(
 	            'div',
 	            { className: 'form-layout' },
 	            _react2.default.createElement(
-	                'p',
-	                { className: 'add-machine' },
-	                'Add your machine '
-	            ),
-	            _react2.default.createElement(
 	                'form',
-	                { id: 'myForm' },
+	                { id: 'myForm', className: 'machine__form' },
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'form-para' },
@@ -26625,35 +26625,40 @@ webpackJsonp([0],[
 	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'docfile form-para' },
-	                    _react2.default.createElement(
-	                        'label',
-	                        { htmlFor: 'docfile', className: 'label-para' },
-	                        'Attach Documents'
-	                    ),
-	                    _react2.default.createElement('input', { className: 'fileInput', type: 'file', onChange: function onChange(e) {
-	                            return _this3._handleDocChange(e);
-	                        } })
+	                    { className: 'img-preview form-para previewComponent' },
+	                    $imagePreview
 	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'previewComponent form-para' },
+	                    { className: 'button-conatiner' },
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 'img-preview' },
-	                        $imagePreview
+	                        { className: 'button-box' },
+	                        _react2.default.createElement(
+	                            'button',
+	                            { className: 'button', type: 'submit' },
+	                            'submit'
+	                        )
 	                    ),
-	                    _react2.default.createElement('input', { className: 'fileInput', type: 'file', onChange: function onChange(e) {
-	                            return _this3._handleImageChange(e);
-	                        } })
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'submit-button' },
 	                    _react2.default.createElement(
-	                        'button',
-	                        { className: 'button', type: 'submit' },
-	                        'submit'
+	                        'div',
+	                        { className: 'input-container' },
+	                        _react2.default.createElement(
+	                            'label',
+	                            { className: 'typefile__input' },
+	                            _react2.default.createElement('img', { src: '../../assets/images/photoattach.svg' }),
+	                            _react2.default.createElement('input', { className: 'fileInput', type: 'file', onChange: function onChange(e) {
+	                                    return _this3._handleImageChange(e);
+	                                } })
+	                        ),
+	                        _react2.default.createElement(
+	                            'label',
+	                            { className: 'typefile__input' },
+	                            _react2.default.createElement('img', { src: '../../assets/images/attach.svg', className: 'input__img' }),
+	                            _react2.default.createElement('input', { className: 'fileInput', type: 'file', onChange: function onChange(e) {
+	                                    return _this3._handleDocChange(e);
+	                                } })
+	                        )
 	                    )
 	                )
 	            )
@@ -26758,14 +26763,31 @@ webpackJsonp([0],[
 	var ViewLayout = _react2.default.createClass({
 	    displayName: 'ViewLayout',
 	
+	    selectHandle: function selectHandle(e) {
+	        if ($(e.target).hasClass('card__image') && $(e.target).children().css('display') === 'none') {
+	            $(e.target).children().css('display', 'flex');
+	        } else if ($(e.target).hasClass('select-effect')) {
+	            $(e.target).css('display', 'none');
+	        } else if ($(e.target).parent().hasClass('select-effect')) {
+	            $(e.target).parent().css('display', 'none');
+	        }
+	    },
 	    render: function render() {
 	        return _react2.default.createElement(
 	            'div',
 	            { className: 'pure-u-lg-1-2 pure-u-md-1-2 pure-u-sm-1' },
 	            _react2.default.createElement(
 	                'div',
-	                { className: 'machine-layout' },
-	                _react2.default.createElement('div', { className: 'card__image', style: { backgroundImage: "url(" + this.props.image + ")" } }),
+	                { className: 'machine-layout', onClick: this.selectHandle },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'card__image', style: { backgroundImage: "url(" + this.props.image + ")" } },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'select-effect' },
+	                        _react2.default.createElement('img', { src: '../../assets/images/right.svg' })
+	                    )
+	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    { className: 'card__name' },
@@ -26805,12 +26827,12 @@ webpackJsonp([0],[
 	            { className: 'viewlayout' },
 	            _react2.default.createElement(
 	                'form',
-	                null,
+	                { className: 'search__form' },
 	                _react2.default.createElement('input', { name: 'search', placeholder: 'search', className: 'search', id: 'search', onKeyPress: this.handleKeyPress })
 	            ),
 	            _react2.default.createElement(
 	                'div',
-	                { className: 'pure-g' },
+	                { className: 'pure-g pad__top' },
 	                this.createCards(_data2.default)
 	            )
 	        );

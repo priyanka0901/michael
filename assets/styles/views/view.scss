@@ -1,29 +1,71 @@
-.viewlayout{
-    width: 75%;
-    height: 800px;
+.viewlayout {
+    width: 70%;
+    max-height: 800px;
+    height: 100%;
     background-color: $main-color;
     overflow: scroll;
 }
 
-.search{
-    width: 400px;
-    line-height: 33px;
-    padding: 0 10px;
+.search__form {
+    position: fixed;
+    width: 70%;
+    background-color: white;
+    z-index: 1;
+}
+
+.search {
+    width: 90%;
+    line-height: 1.6;
+    padding: 10px 12px;
     font-size: 16px;
     color: #333;
-    margin: 25px 120px;
+    margin: 25px 50px;
     outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0.4px 0.1px rgba(0, 0, 0, 0.1);
+}
+.search:focus {
+    box-shadow: 0 0 0.8px 0.8px rgba(0, 0, 0, 0.08);
 }
 
-.machine-layout{
+.pad__top {
+    padding-top: 110px;
+}
+
+.machine-layout {
     width: 80%;
-    height: 250px;
-    border:1px solid #ccc;
-    margin: 40px 50px;
+    margin: 25px 50px;
 }
 
-.card__image{
-    height: 200px;
+.card__image {
+    height: 250px;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
+
+.card__name {
+    text-transform: capitalize;
+    margin-top: 7px;
+    color: #444;
+}
+
+.select-effect{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    img{
+        height: 80px;
+        margin: auto;
+    }
+}
+
+
+
+
+
